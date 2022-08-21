@@ -2,14 +2,14 @@
 ML notebook template
 
 ## Run in Docker with Multiple Analysis Libraries
-[Reference](https://github.com/jupyter/docker-stacks/tree/main/scipy-notebook):  
+[Reference](https://github.com/jupyter/docker-stacks/tree/main/scipy-notebook)  
 ``$ make build``  
 ``$ make run``
 
 ## Run in Local
 
 ### 1. Install Packages Manager
-[Reference](https://blog.kyomind.tw/python-poetry/#Poetry-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F):  
+[Reference](https://blog.kyomind.tw/python-poetry/#Poetry-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F)  
 ``$ pip3 install poetry``  
 ``$ poetry init``  
 ``$ poetry config virtualenvs.in-project true``  
