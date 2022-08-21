@@ -20,5 +20,5 @@ ML notebook template
 ``$ poetry run python -m ipykernel install --user --name <YOUR ENV NAME>``  
 
 ### 3. Launch Jupyter
-We recommend using ``tmux``  
+We recommend using ``tmux``.  
 ``$ jupyter lab``  
