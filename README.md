@@ -20,7 +20,7 @@ You can choose one method to run your Jupyter.
 #### Command
 ``$ pip3 install poetry``  
 ``$ poetry config virtualenvs.in-project true``  
-``$ poetry install.  
+``$ poetry install``  
 ``$ poetry shell`` or ``source $(poetry env info --path)/bin/activate``  
 
 ### 2. Install Notebook Kernel
