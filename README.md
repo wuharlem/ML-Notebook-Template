@@ -14,7 +14,7 @@ ML notebook template
 ``$ poetry init``  
 ``$ poetry config virtualenvs.in-project true``  
 ``$ poetry env use python.  
-``$ poetry shell``  
+``$ poetry shell``   
 
 ### 2. Install Notebook Kernel
 ``$ poetry run python -m ipykernel install --user --name <YOUR ENV NAME>``  
