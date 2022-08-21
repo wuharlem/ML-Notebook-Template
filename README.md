@@ -8,7 +8,7 @@ You can choose one method to run your Jupyter.
 ## Run in Docker with Multiple Analysis Libraries
 - [Reference](https://github.com/jupyter/docker-stacks/tree/main/scipy-notebook)  
 ``$ make build``  
-``$ make run``
+``$ make run PORT="<YOUR PORT>"``
 
 ## Run in Local
 
@@ -19,9 +19,8 @@ You can choose one method to run your Jupyter.
     - OS: macOS m1
 #### Command
 ``$ pip3 install poetry``  
-``$ poetry config virtualenvs.in-project true``  
-``$ poetry install``  
-``$ poetry shell`` or ``source $(poetry env info --path)/bin/activate``  
+``$ make install``  
+``$ source $(poetry env info --path)/bin/activate``  
 
 ### 2. Install Notebook Kernel
 ``$ poetry run python -m ipykernel install --user --name <YOUR ENV NAME>``  

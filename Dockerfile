@@ -2,6 +2,7 @@
 # Distributed under the terms of the Modified BSD License.
 ARG OWNER=jupyter
 ARG BASE_CONTAINER=$OWNER/scipy-notebook
+ARG PROJECT_PATH
 
 FROM $BASE_CONTAINER
 
@@ -21,3 +22,11 @@ RUN apt-get update --yes && \
 RUN pip3 install --no-cache-dir poetry
 
 USER ${NB_UID}
+
+# copy project
+COPY ./pyproject.toml ./
+COPY ./poetry.lock* ./
+
+RUN POETRY_VIRTUALENVS_IN_PROJECT=true \
+    POETRY_NO_INTERACTION=true \
+    poetry install

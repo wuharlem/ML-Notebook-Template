@@ -6,6 +6,7 @@ PLATFORM := linux/amd64
 SERVICE_IMAGE_NAME := ${SERVICE_NAME}-${API_NAME}
 DOCKERFILE_PATH := Dockerfile
 PROJECT_PATH := experiment
+PORT := 8888
 
 ##@ Helpers
 .PHONY: help
@@ -36,7 +37,14 @@ endif
 .PHONY: run
 run: ## Launch service
 	@docker run \
-		-p 8888:8888 \
+		-p $(PORT):8888 \
 		-v $(PWD):/home/jovyan/work/ \
 		--name ${SERVICE_IMAGE_NAME}-container \
 		--rm -it ${SERVICE_IMAGE_NAME}
+
+
+##@ INSTALL PACKAGES IN LOCAL
+.PHONY: install
+install:
+	@poetry config virtualenvs.in-project true
+	@poetry install
