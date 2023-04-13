@@ -16,17 +16,15 @@ You can choose one method to run your Jupyter.
 
 ### 1. Install Packages Manager
 [Reference](https://blog.kyomind.tw/python-poetry/#Poetry-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F)  
-#### Environment:
-    - Python 3.9
-    - OS: macOS m1
 #### Command
 ``$ pip3 install poetry``  
 ``$ make install``  
 ``$ source $(poetry env info --path)/bin/activate``  
 
 ### 2. Install Notebook Kernel
-``$ poetry run python -m ipykernel install --user --name <YOUR ENV NAME>``  
+1. ``$ poetry add ipykernel``
+2. ``$ python -m ipykernel install --user --name <ENV NAME>``
 
 ### 3. Launch Jupyter
-We recommend using ``tmux``.  
-``$ jupyter lab``  
+1. Run in Visual Studio
+2. ``$ jupyter lab``  
